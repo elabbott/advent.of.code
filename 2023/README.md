@@ -2,39 +2,39 @@
 
 ## [Day 1](https://adventofcode.com/2022/day/1)
 
-- [.go](./golang/day_1/day_1.go)
+- [.go](./golang/day_01/day_1.go)
 
 ## [Day 2](https://adventofcode.com/2022/day/2)
 
-- [.go](./golang/day_2/day_2.go)
+- [.go](./golang/day_02/day_2.go)
 
 ## [Day 3](https://adventofcode.com/2022/day/3)
 
-- [.go](./golang/day_3/day_3.go)
+- [.go](./golang/day_03/day_3.go)
 
 ## [Day 4](https://adventofcode.com/2022/day/4)
 
-- [.go](./golang/day_4/day_4.go)
+- [.go](./golang/day_04/day_4.go)
 
 ## [Day 5](https://adventofcode.com/2022/day/5)
 
-- [.go](./golang/day_5/day_5.go)
+- [.go](./golang/day_05/day_5.go)
 
 ## [Day 6](https://adventofcode.com/2022/day/6)
 
-- [.go](./golang/day_6/day_6.go)
+- [.go](./golang/day_06/day_6.go)
 
 ## [Day 7](https://adventofcode.com/2022/day/7)
 
-- [.go](./golang/day_7/day_7.go)
+- [.go](./golang/day_07/day_7.go)
 
 ## [Day 8](https://adventofcode.com/2022/day/8)
 
-- [.go](./golang/day_8/day_8.go)
+- [.go](./golang/day_08/day_8.go)
 
 ## [Day 9](https://adventofcode.com/2022/day/9)
 
-- [.go](./golang/day_9/day_9.go)
+- [.go](./golang/day_09/day_9.go)
 
 ## [Day 10](https://adventofcode.com/2022/day/10)
 
