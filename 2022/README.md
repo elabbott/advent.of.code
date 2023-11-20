@@ -2,7 +2,7 @@
 
 ## [Day 1](https://adventofcode.com/2022/day/1)
 
-- [.go](/golang/day_1/day_1.go)
+- [.go](./golang/day_1/day_1.go)
 
 ## [Day 2](https://adventofcode.com/2022/day/2)
 
