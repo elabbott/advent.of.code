@@ -105,24 +105,28 @@ func GetGuideValueA(value string) int {
 	}
 }
 
-func PlayGame(player1, player2 int) int {
+func PlayGame(player1, player2 int) [2]int {
 	if player1 == player2 {
-		return Draw + player1
+		return [2]int{Draw + player1, Draw + player2}
 	}
 
 	if player1 == Rock && player2 == Scissors {
-		return Win + player1
+		return [2]int{Win + player1, Lose + player2}
 	}
 
 	if player1 == Paper && player2 == Rock {
-		return Win + player1
+		return [2]int{Win + player1, Lose + player2}
 	}
 
 	if player1 == Scissors && player2 == Paper {
-		return Win + player1
+		return [2]int{Win + player1, Lose + player2}
 	}
 
-	return Lose + player1
+	return [2]int{Lose + player1, Win + player2}
+}
+
+func GetPlayerScore(scores [2]int, player int) int {
+	return scores[player-1]
 }
 
 func LoadShard(filePath string) [][2]string {

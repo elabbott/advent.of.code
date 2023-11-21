@@ -17,7 +17,9 @@ func main() {
 	for _, shard := range data {
 		elf := helper.GetGuideValueA(shard[0])
 		me := helper.GetGuideValueA(shard[1])
-		score += helper.PlayGame(me, elf)
+
+		matchScores := helper.PlayGame(me, elf)
+		score += helper.GetPlayerScore(matchScores, 1)
 	}
 
 	fmt.Println(score)
@@ -29,7 +31,9 @@ func main() {
 		matchResult := shard[1]
 		me := helper.GetMyPlay(elf, matchResult)
 
-		score += helper.PlayGame(me, elfPlay)
+		matchScores := helper.PlayGame(me, elfPlay)
+
+		score += helper.GetPlayerScore(matchScores, 1)
 	}
 
 	fmt.Println(score)
