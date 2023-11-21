@@ -11,26 +11,28 @@ func main() {
 
 	filePath := "./input.txt"
 
-	numbers := loadArray(filePath)
+	numbers := loadShard(filePath)
 
 	if numbers == nil {
 		fmt.Println("Error loading file")
 		return
 	}
 
-	answer := findNLargest(numbers, 2)
-	fmt.Println(answer)
+	var array = convertShardToArray(numbers)
+
+	findNLargest(numbers, 1)
 
 	// Reset the numbers array
-	numbers = loadArray(filePath)
+	// numbers = loadShard(filePath)
 
-	answer2 := findNLargest(numbers, 3)
-	fmt.Println(answer2)
+	numbers = array
+
+	findNLargest(numbers, 3)
+
 }
 
-func findNLargest(numbers [][]int, n int) int {
+func findNLargest(numbers [][]int, n int) {
 	var biggestNumberGroup []int
-	var savedNumbers [][]int
 	var zeroArray []int
 
 	zeroArray = append(zeroArray, 0)
@@ -40,13 +42,17 @@ func findNLargest(numbers [][]int, n int) int {
 		biggestJ = findIndexOfLargestArraySum(numbers)
 		sum := sumArray(numbers[biggestJ])
 		biggestNumberGroup = append(biggestNumberGroup, sum)
-		savedNumbers = append(savedNumbers, numbers[biggestJ])
 
-		fmt.Println(savedNumbers)
 		numbers[biggestJ] = zeroArray
 	}
 
-	return sumArray(biggestNumberGroup)
+	result := sumArray(biggestNumberGroup)
+
+	fmt.Println(formatResult(result, n))
+}
+
+func formatResult(result int, n int) string {
+	return fmt.Sprintf("Sum of top %d is %d", n, result)
 }
 
 func sumArray(numbers []int) int {
@@ -77,7 +83,7 @@ func findIndexOfLargestArraySum(numbers [][]int) int {
 	return biggestI
 }
 
-func loadArray(filePath string) [][]int {
+func loadShard(filePath string) [][]int {
 	// Open the file
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -114,4 +120,15 @@ func loadArray(filePath string) [][]int {
 	}
 
 	return numbers
+}
+
+func convertShardToArray(shard [][]int) [][]int {
+	array := make([][]int, len(shard))
+
+	for i, subArray := range shard {
+		array[i] = make([]int, len(subArray))
+		copy(array[i], subArray)
+	}
+
+	return array
 }
