@@ -20,9 +20,15 @@ type Compartment struct {
 
 func DayThree_A(data []string) int {
 
-	// rucksacks := GetInput(data)
+	rucksacks := GetInput(data)
+	sum := 0
+	for _, rucksack := range rucksacks.Rucksacks {
+		if DeteremineDuplicateItem(rucksack) != "" {
+			sum += DeterminePriority(DeteremineDuplicateItem(rucksack))
+		}
+	}
 
-	return 0
+	return sum
 }
 
 func DeteremineDuplicateItem(rucksack Rucksack) string {
