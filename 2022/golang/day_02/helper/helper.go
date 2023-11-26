@@ -129,7 +129,7 @@ func GetPlayerScore(scores [2]int, player int) int {
 	return scores[player-1]
 }
 
-func LoadShard(filePath string) [][2]string {
+func LoadSlice(filePath string) [][2]string {
 	// Open the file
 	file, err := os.Open(filePath)
 	if err != nil {

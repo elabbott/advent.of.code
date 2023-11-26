@@ -11,19 +11,19 @@ func main() {
 
 	filePath := "./input.txt"
 
-	numbers := loadShard(filePath)
+	numbers := loadSlice(filePath)
 
 	if numbers == nil {
 		fmt.Println("Error loading file")
 		return
 	}
 
-	var array = convertShardToArray(numbers)
+	var array = convertSliceToArray(numbers)
 
 	findNLargest(numbers, 1)
 
 	// Reset the numbers array
-	// numbers = loadShard(filePath)
+	// numbers = loadSlice(filePath)
 
 	numbers = array
 
@@ -83,7 +83,7 @@ func findIndexOfLargestArraySum(numbers [][]int) int {
 	return biggestI
 }
 
-func loadShard(filePath string) [][]int {
+func loadSlice(filePath string) [][]int {
 	// Open the file
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -122,10 +122,10 @@ func loadShard(filePath string) [][]int {
 	return numbers
 }
 
-func convertShardToArray(shard [][]int) [][]int {
-	array := make([][]int, len(shard))
+func convertSliceToArray(slice [][]int) [][]int {
+	array := make([][]int, len(slice))
 
-	for i, subArray := range shard {
+	for i, subArray := range slice {
 		array[i] = make([]int, len(subArray))
 		copy(array[i], subArray)
 	}

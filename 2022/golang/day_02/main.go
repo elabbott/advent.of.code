@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	data := helper.LoadShard(helper.FilePath)
+	data := helper.LoadSlice(helper.FilePath)
 	score := 0
 
 	if data == nil {
@@ -14,9 +14,9 @@ func main() {
 		return
 	}
 
-	for _, shard := range data {
-		elf := helper.GetGuideValueA(shard[0])
-		me := helper.GetGuideValueA(shard[1])
+	for _, slice := range data {
+		elf := helper.GetGuideValueA(slice[0])
+		me := helper.GetGuideValueA(slice[1])
 
 		matchScores := helper.PlayGame(me, elf)
 		score += helper.GetPlayerScore(matchScores, 1)
@@ -25,10 +25,10 @@ func main() {
 	fmt.Println(score)
 
 	score = 0
-	for _, shard := range data {
-		elf := shard[0]
+	for _, slice := range data {
+		elf := slice[0]
 		elfPlay := helper.GetGuideValueA(elf)
-		matchResult := shard[1]
+		matchResult := slice[1]
 		me := helper.GetMyPlay(elf, matchResult)
 
 		matchScores := helper.PlayGame(me, elfPlay)
