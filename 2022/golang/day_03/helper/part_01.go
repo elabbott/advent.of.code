@@ -3,20 +3,7 @@ package helper
 import (
 	"bufio"
 	"os"
-	"strings"
 )
-
-type Input struct {
-	Rucksacks []Rucksack
-}
-
-type Rucksack struct {
-	Compartment [2]Compartment
-}
-
-type Compartment struct {
-	Items string
-}
 
 func DayThree_A(data []string) int {
 
@@ -47,35 +34,6 @@ func DeteremineDuplicateItem(rucksack Rucksack) string {
 	}
 
 	return ""
-}
-
-func GetInput(rucksacks []string) Input {
-	input := Input{}
-	for _, rucksack := range rucksacks {
-		input.Rucksacks = append(input.Rucksacks, GetRucksack(rucksack))
-	}
-	return input
-}
-
-func GetRucksack(rucksack string) Rucksack {
-	rucksackStruct := Rucksack{}
-
-	length := len(rucksack) / 2
-
-	rucksackStruct.Compartment[0] = GetCompartment(rucksack[:length])
-	rucksackStruct.Compartment[1] = GetCompartment(rucksack[length:])
-
-	return rucksackStruct
-}
-
-func GetCompartment(compartment string) Compartment {
-	compartmentStruct := Compartment{}
-	compartmentStruct.Items = compartment
-	return compartmentStruct
-}
-
-func GetItems(compartment string) []string {
-	return strings.Split(compartment, "")
 }
 
 func DeterminePriority(item string) int {
