@@ -17,11 +17,6 @@ func GetRucksack(rucksack string) Rucksack {
 
 	rucksackStruct.Compartment[0] = GetCompartment(rucksack[:length])
 	rucksackStruct.Compartment[1] = GetCompartment(rucksack[length:])
-	rucksackStruct.Contents = make([]string, len(rucksack)) // added for part 2
-
-	for i, c := range rucksack {
-		rucksackStruct.Contents[i] = string(c)
-	}
 
 	return rucksackStruct
 }
@@ -29,6 +24,11 @@ func GetRucksack(rucksack string) Rucksack {
 func GetCompartment(compartment string) Compartment {
 	compartmentStruct := Compartment{}
 	compartmentStruct.Items = compartment
+	compartmentStruct.Contents = make([]string, len(compartment)) // added for part 2
+
+	for i, c := range compartment {
+		compartmentStruct.Contents[i] = string(c)
+	}
 	return compartmentStruct
 }
 
@@ -42,9 +42,9 @@ type Input struct {
 
 type Rucksack struct {
 	Compartment [2]Compartment
-	Contents    []string // added for part 2
 }
 
 type Compartment struct {
-	Items string
+	Items    string
+	Contents []string // added for part 2
 }

@@ -1,19 +1,32 @@
 package helper
 
+const maxRucksacks int = 3
+
 type Group struct {
 	Badge     string
-	Rucksacks [3]Rucksack
+	Rucksacks [maxRucksacks]Rucksack
 }
 
 func GetGroups(rucksacks []string) []Group {
-	groups := make([]Group, len(rucksacks))
 
-	for i, rucksack := range rucksacks {
-		for j := 0; j < 3; j++ {
-			groups[i].Rucksacks[j] = GetRucksack(rucksack)
+	if !ValidateNumberOfRucksacks(rucksacks) {
+		panic("invalid number of rucksacks")
+	}
+
+	groups := make([]Group, len(rucksacks)/3)
+	index := 0
+
+	for g := 0; g < len(groups); g++ {
+		for i := 0; i < maxRucksacks && index < len(rucksacks); i++ {
+			groups[g].Rucksacks[i] = GetRucksack(rucksacks[index])
+			index++
 		}
-		groups[i].Badge = "unknown"
+		groups[g].Badge = DetermineBadge(groups[g])
 	}
 
 	return groups
+}
+
+func ValidateNumberOfRucksacks(rucksacks []string) bool {
+	return len(rucksacks)%3 == 0
 }
