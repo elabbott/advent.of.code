@@ -20,7 +20,11 @@ func do_01() {
 
 func do_02() {
 	// input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_02/tests/input.txt")
-	// input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_02/input.txt")
+	input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_02/input.txt")
 
-	println("Not implemented yet.")
+	games := day_02.GetGamesFromStringArray(input)
+
+	gameMinimums := day_02.GetGameMinimums(games)
+
+	println(day_02.SumGameMinimumPowers(gameMinimums))
 }
