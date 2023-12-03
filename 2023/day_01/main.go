@@ -20,5 +20,11 @@ func do_01() {
 }
 
 func do_02() {
-	println("Not implemented")
+	// input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_01/tests/input.txt")
+	input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_01/input.txt")
+
+	deciphered := day_01.DecipherCalibration2(input)
+	sum := day_01.SumCalibration(deciphered)
+
+	println("Sum of calibration numbers:", sum)
 }

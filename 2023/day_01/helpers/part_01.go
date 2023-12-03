@@ -1,19 +1,24 @@
 package day_01
 
 import (
+	"2023/global"
 	"strconv"
 )
 
-func TransformStringToInt(input string) int {
-	result := 0
+func IsOneDigitNumber(input string) bool {
+	num, err := strconv.Atoi(input)
+	if err == nil && num >= 0 && num <= 9 {
+		return true
+	}
+	return false
+}
 
-	arrayInput := stringToArray(input)
+func TransformStringArrayToInt(input []string) int {
+	result := 0
 	numArray := []string{}
 
-	for _, char := range arrayInput {
-
-		num, err := strconv.Atoi(char)
-		if err == nil && num >= 0 && num <= 9 {
+	for _, char := range input {
+		if IsOneDigitNumber(char) {
 			numArray = append(numArray, char)
 		}
 	}
@@ -34,12 +39,10 @@ func TransformStringToInt(input string) int {
 	return result
 }
 
-func stringToArray(input string) []string {
-	arrayResult := []string{}
-	for _, char := range input {
-		arrayResult = append(arrayResult, string(char))
-	}
-	return arrayResult
+func TransformStringToInt(input string) int {
+	arrayInput := global.StringToArray(input)
+
+	return TransformStringArrayToInt(arrayInput)
 }
 
 func SumCalibration(calibrationNumbers []int) int {
