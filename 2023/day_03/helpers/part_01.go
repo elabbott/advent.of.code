@@ -45,7 +45,7 @@ func FindEnginePartNumbers(schematic [][]string) []int {
 			isPartNumber := false
 
 			for index := 0; index < len(numberBuilder); index++ {
-				isPartNumber = IsPartNumber(schematic, i, j+index)
+				isPartNumber, _, _ = IsPartNumber(schematic, i, j+index)
 				if isPartNumber {
 					break
 				}
@@ -78,49 +78,49 @@ func BuildNumber(schematic [][]string, row int, column int) string {
 	return number
 }
 
-func IsPartNumber(schematic [][]string, row int, column int) bool {
+func IsPartNumber(schematic [][]string, row int, column int) (bool, int, int) {
 	if IsSafeToCheckLeft(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row][column-1]) {
-			return true
+			return true, row, column - 1
 		}
 	}
 	if IsSafeToCheckRight(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row][column+1]) {
-			return true
+			return true, row, column + 1
 		}
 	}
 	if IsSafeToCheckUp(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row-1][column]) {
-			return true
+			return true, row - 1, column
 		}
 	}
 	if IsSafeToCheckDown(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row+1][column]) {
-			return true
+			return true, row + 1, column
 		}
 	}
 	if IsSafeToCheckUpLeft(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row-1][column-1]) {
-			return true
+			return true, row - 1, column - 1
 		}
 	}
 	if IsSafeToCheckUpRight(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row-1][column+1]) {
-			return true
+			return true, row - 1, column + 1
 		}
 	}
 	if IsSafeToCheckDownLeft(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row+1][column-1]) {
-			return true
+			return true, row + 1, column - 1
 		}
 	}
 	if IsSafeToCheckDownRight(schematic, row, column) {
 		if IsSpecialCharacter(schematic[row+1][column+1]) {
-			return true
+			return true, row + 1, column + 1
 		}
 	}
 
-	return false
+	return false, -1, -1
 }
 
 func IsSafeToCheckLeft(schematic [][]string, rowIndex int, columnIndex int) bool {

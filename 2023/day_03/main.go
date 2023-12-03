@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	do_01()
+	// do_01()
 	do_02()
 }
 
@@ -28,4 +28,20 @@ func do_01() {
 }
 
 func do_02() {
+	// input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_03/tests/input.txt")
+	input := global.LoadInput("/home/eric.abbott/.source/elabbott/advent.of.code/2023/day_03/input.txt")
+
+	schematic := day_03.BuildSchematic(input)
+
+	// day_03.PrintSchematic(schematic)
+
+	_, gears := day_03.FindGearsNumbers(schematic)
+
+	gears = day_03.RemoveInvalidGears(gears)
+
+	day_03.PrintGears(gears)
+
+	sum := day_03.SumGearRatios(gears)
+
+	day_03.PrintTotalGearRatio(sum)
 }
