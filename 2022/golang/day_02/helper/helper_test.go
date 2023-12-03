@@ -1,7 +1,7 @@
 package helper_test
 
 import (
-	"day_02/helper"
+	"2022/golang/day_02/helper"
 	"testing"
 )
 

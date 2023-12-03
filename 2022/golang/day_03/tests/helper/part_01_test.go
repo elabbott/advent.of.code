@@ -1,8 +1,8 @@
 package helper_test
 
 import (
-	"2022/day_03/helper"
-	"2022/day_03/structs"
+	"2022/golang/day_03/helper"
+	"2022/golang/day_03/structs"
 	"testing"
 )
 

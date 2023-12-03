@@ -1,7 +1,7 @@
 package main
 
 import (
-	"2022/day_02/helper"
+	"2022/golang/day_02/helper"
 	"fmt"
 )
 

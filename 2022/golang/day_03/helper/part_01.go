@@ -1,7 +1,7 @@
 package helper
 
 import (
-	"2022/day_03/structs"
+	"2022/golang/day_03/structs"
 	"bufio"
 	"os"
 )
