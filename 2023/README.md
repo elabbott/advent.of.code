@@ -1,101 +1,101 @@
-# [Advent of Code 2022](https://adventofcode.com/2023)
+# [Advent of Code 2023](https://adventofcode.com/2023)
 
-## [Day 1](https://adventofcode.com/2022/day/1)
+## [Day 1](https://adventofcode.com/2023/day/1)
 
-- [.go](./golang/day_01/day_1.go)
+- [.go](./day_01)
 
-## [Day 2](https://adventofcode.com/2022/day/2)
+## [Day 2](https://adventofcode.com/2023/day/2)
 
-- [.go](./golang/day_02/day_2.go)
+- [.go](./day_02)
 
-## [Day 3](https://adventofcode.com/2022/day/3)
+## [Day 3](https://adventofcode.com/2023/day/3)
 
-- [.go](./golang/day_03/day_3.go)
+- [.go](./day_03)
 
-## [Day 4](https://adventofcode.com/2022/day/4)
+## [Day 4](https://adventofcode.com/2023/day/4)
 
-- [.go](./golang/day_04/day_4.go)
+- [.go](./day_04)
 
-## [Day 5](https://adventofcode.com/2022/day/5)
+## [Day 5](https://adventofcode.com/2023/day/5)
 
-- [.go](./golang/day_05/day_5.go)
+- [.go](./day_05)
 
-## [Day 6](https://adventofcode.com/2022/day/6)
+## [Day 6](https://adventofcode.com/2023/day/6)
 
-- [.go](./golang/day_06/day_6.go)
+- [.go](./day_06)
 
-## [Day 7](https://adventofcode.com/2022/day/7)
+## [Day 7](https://adventofcode.com/2023/day/7)
 
-- [.go](./golang/day_07/day_7.go)
+- [.go](./day_07)
 
-## [Day 8](https://adventofcode.com/2022/day/8)
+## [Day 8](https://adventofcode.com/2023/day/8)
 
-- [.go](./golang/day_08/day_8.go)
+- [.go](./day_08)
 
-## [Day 9](https://adventofcode.com/2022/day/9)
+## [Day 9](https://adventofcode.com/2023/day/9)
 
-- [.go](./golang/day_09/day_9.go)
+- [.go](./day_09)
 
-## [Day 10](https://adventofcode.com/2022/day/10)
+## [Day 10](https://adventofcode.com/2023/day/10)
 
-- [.go](./golang/day_10/day_10.go)
+- [.go](./day_10)
 
-## [Day 11](https://adventofcode.com/2022/day/11)
+## [Day 11](https://adventofcode.com/2023/day/11)
 
-- [.go](./golang/day_11/day_11.go)
+- [.go](./day_11)
 
-## [Day 12](https://adventofcode.com/2022/day/12)
+## [Day 12](https://adventofcode.com/2023/day/12)
 
-- [.go](./golang/day_12/day_12.go)
+- [.go](./day_12)
 
-## [Day 13](https://adventofcode.com/2022/day/13)
+## [Day 13](https://adventofcode.com/2023/day/13)
 
-- [.go](./golang/day_13/day_13.go)
+- [.go](./day_13)
 
-## [Day 14](https://adventofcode.com/2022/day/14)
+## [Day 14](https://adventofcode.com/2023/day/14)
 
-- [.go](./golang/day_14/day_14.go)
+- [.go](./day_14)
 
-## [Day 15](https://adventofcode.com/2022/day/15)
+## [Day 15](https://adventofcode.com/2023/day/15)
 
-- [.go](./golang/day_15/day_15.go)
+- [.go](./day_15)
 
-## [Day 16](https://adventofcode.com/2022/day/16)
+## [Day 16](https://adventofcode.com/2023/day/16)
 
-- [.go](./golang/day_16/day_16.go)
+- [.go](./day_16)
 
-## [Day 17](https://adventofcode.com/2022/day/17)
+## [Day 17](https://adventofcode.com/2023/day/17)
 
-- [.go](./golang/day_17/day_17.go)
+- [.go](./day_17)
 
-## [Day 18](https://adventofcode.com/2022/day/18)
+## [Day 18](https://adventofcode.com/2023/day/18)
 
-- [.go](./golang/day_18/day_18.go)
+- [.go](./day_18)
 
-## [Day 19](https://adventofcode.com/2022/day/19)
+## [Day 19](https://adventofcode.com/2023/day/19)
 
-- [.go](./golang/day_19/day_19.go)
+- [.go](./day_19)
 
-## [Day 20](https://adventofcode.com/2022/day/20)
+## [Day 20](https://adventofcode.com/2023/day/20)
 
-- [.go](./golang/day_20/day_20.go)
+- [.go](./day_20)
 
-## [Day 21](https://adventofcode.com/2022/day/21)
+## [Day 21](https://adventofcode.com/2023/day/21)
 
-- [.go](./golang/day_21/day_21.go)
+- [.go](./day_21)
 
-## [Day 22](https://adventofcode.com/2022/day/22)
+## [Day 22](https://adventofcode.com/2023/day/22)
 
-- [.go](./golang/day_22/day_22.go)
+- [.go](./day_22)
 
-## [Day 23](https://adventofcode.com/2022/day/23)
+## [Day 23](https://adventofcode.com/2023/day/23)
 
-- [.go](./golang/day_23/day_23.go)
+- [.go](./day_23)
 
-## [Day 24](https://adventofcode.com/2022/day/24)
+## [Day 24](https://adventofcode.com/2023/day/24)
 
-- [.go](./golang/day_24/day_24.go)
+- [.go](./day_24)
 
-## [Day 25](https://adventofcode.com/2022/day/25)
+## [Day 25](https://adventofcode.com/2023/day/25)
 
-- [.go](./golang/day_25/day_25.go)
+- [.go](./day_25)
