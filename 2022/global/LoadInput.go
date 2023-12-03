@@ -1,4 +1,4 @@
-package globalhelpers
+package global
 
 import (
 	"bufio"

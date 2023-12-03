@@ -1,7 +1,8 @@
 package helper_test
 
 import (
-	"day_03/helper"
+	"2022/day_03/helper"
+	"2022/day_03/structs"
 	"testing"
 )
 
@@ -27,14 +28,14 @@ func TestDayThree_A(t *testing.T) {
 
 func TestDeteremineDuplicateItem(t *testing.T) {
 	type args struct {
-		rucksack helper.Rucksack
+		rucksack structs.Rucksack
 	}
 	tests := []struct {
 		name string
 		args args
 		want string
 	}{
-		{"DeteremineDuplicateItem", args{helper.Rucksack{Compartment: [2]helper.Compartment{{Items: "vJrwpWtwJgWr"}, {Items: "hcsFMMfFFhFp"}}}}, "p"},
+		{"DeteremineDuplicateItem", args{structs.Rucksack{Compartment: [2]structs.Compartment{{Items: "vJrwpWtwJgWr"}, {Items: "hcsFMMfFFhFp"}}}}, "p"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

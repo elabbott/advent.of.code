@@ -1,7 +1,7 @@
 package main
 
 import (
-	"day_02/helper"
+	"2022/day_02/helper"
 	"fmt"
 )
 

@@ -1,13 +1,14 @@
 package helper
 
 import (
+	"2022/day_03/structs"
 	"bufio"
 	"os"
 )
 
 func DayThree_A(data []string) int {
 
-	rucksacks := GetInput(data)
+	rucksacks := structs.GetInput(data)
 	sum := 0
 	for _, rucksack := range rucksacks.Rucksacks {
 		if DeteremineDuplicateItem(rucksack) != "" {
@@ -18,12 +19,12 @@ func DayThree_A(data []string) int {
 	return sum
 }
 
-func DeteremineDuplicateItem(rucksack Rucksack) string {
+func DeteremineDuplicateItem(rucksack structs.Rucksack) string {
 	compartment1 := rucksack.Compartment[0].Items
 	compartment2 := rucksack.Compartment[1].Items
 
-	items1 := GetItems(compartment1)
-	items2 := GetItems(compartment2)
+	items1 := structs.GetItems(compartment1)
+	items2 := structs.GetItems(compartment2)
 
 	for _, item1 := range items1 {
 		for _, item2 := range items2 {

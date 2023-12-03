@@ -104,7 +104,7 @@ func loadSlice(filePath string) [][]int {
 		number, err := strconv.Atoi(line)
 		if err != nil {
 			i++
-			fmt.Sprintf("Error converting line to integer: %s. Starting group %d", err, i)
+			_ = fmt.Sprintf("Error converting line to integer: %s. Starting group %d", err, i)
 
 			numbers = append(numbers, numberGroups)
 			numberGroups = []int{}

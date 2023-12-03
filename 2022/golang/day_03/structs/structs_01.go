@@ -1,6 +1,8 @@
-package helper
+package structs
 
-import "strings"
+import (
+	"strings"
+)
 
 func GetInput(rucksacks []string) Input {
 	input := Input{}

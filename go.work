@@ -1,6 +1,6 @@
 go 1.21.4
 
-use ./2022/golang/day_01
-use ./2022/golang/day_02
-use ./2022/golang/day_03
-use ./global_helpers
+// 2022
+use ./2022
+// 2023
+use ./2023

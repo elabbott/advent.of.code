@@ -1,6 +1,7 @@
 package helper
 
 import (
+	"2022/day_03/structs"
 	"regexp"
 	"sort"
 )
@@ -48,7 +49,7 @@ func SumBadges(badges []int) int {
 	return sum
 }
 
-func DetermineBadge(group Group) string {
+func DetermineBadge(group structs.Group) string {
 
 	uniqueItems := []string{}
 
@@ -68,7 +69,7 @@ func DetermineBadge(group Group) string {
 	return "badge not found"
 }
 
-func GetUniqueContents(rucksack Rucksack) []string {
+func GetUniqueContents(rucksack structs.Rucksack) []string {
 	unique := []string{}
 
 	for _, item := range rucksack.Compartment {
@@ -89,4 +90,24 @@ func Contains(unique []string, item string) bool {
 		}
 	}
 	return false
+}
+
+func GetGroups(rucksacks []string) []structs.Group {
+
+	if !structs.ValidateNumberOfRucksacks(rucksacks) {
+		panic("invalid number of rucksacks")
+	}
+
+	groups := make([]structs.Group, len(rucksacks)/3)
+	index := 0
+
+	for g := 0; g < len(groups); g++ {
+		for i := 0; i < structs.MaxRucksacks && index < len(rucksacks); i++ {
+			groups[g].Rucksacks[i] = structs.GetRucksack(rucksacks[index])
+			index++
+		}
+		groups[g].Badge = DetermineBadge(groups[g])
+	}
+
+	return groups
 }
